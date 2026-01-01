@@ -8,8 +8,8 @@ const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   // Static export for GitHub Pages
   output: 'export',
-  // Base path for custom domain (root)
-  basePath: '',
+  // Base path for GitHub Pages (repository name)
+  basePath: '/testing',
   // Disable image optimization for static export
   images: {
     unoptimized: true,
