@@ -6,8 +6,13 @@ const withMDX = mdx();
 const nextConfig = {
   // Configure `pageExtensions` to include MDX files
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
-  // Configure image domains
+  // Static export for GitHub Pages
+  output: 'export',
+  // Base path for custom domain (root)
+  basePath: '',
+  // Disable image optimization for static export
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -15,6 +20,8 @@ const nextConfig = {
       },
     ],
   },
+  // Trailing slash for GitHub Pages compatibility
+  trailingSlash: true,
 };
 
 export default withMDX(nextConfig);
